@@ -42,4 +42,12 @@ class SpiderNotification(object):
 
         msg = "Sending notification for spider %s" % spider.name
         spider.log(msg, level=log.INFO)
-        urllib.urlopen("%s?%s" % (self.url, params))
+        try:
+            f = urllib.urlopen("%s?%s" % (self.url, params))
+            status_code = f.getcode()
+            if status_code != 200:
+                msg = "Can't send notification to %s HTTP status code %d" % (self.url, status_code)
+                spider.log(msg, level=log.WARNING)
+        except IOError:
+            msg = "Can't send notification to %s" % self.url
+            spider.log(msg, level=log.WARNING)
