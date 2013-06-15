@@ -17,11 +17,11 @@ class SpiderNotification(object):
     @classmethod
     def from_crawler(cls, crawler):
         if not crawler.settings.get('SPIDER_NOTIFICATION_ENABLED'):
-            raise NotConfigured
+            raise NotConfigured('You must activate the SPIDER_NOTIFICATION_ENABLED setting.')
 
         url = crawler.settings.get('SPIDER_NOTIFICATION_URL')
         if not url:
-            raise NotConfigured
+            raise NotConfigured('You must add an URL to the SPIDER_NOTIFICATION_URL setting.')
 
         attrs = crawler.settings.get('SPIDER_NOTIFICATION_ATTRS')
         if not attrs:
