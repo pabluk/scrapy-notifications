@@ -15,6 +15,7 @@ setup(
     description="Send HTTP notifications on spider actions",
     long_description=long_description,
     packages=['scrapy_notifications'],
+    provides=['scrapy_notifications (0.1.0)'],
     requires=['Scrapy (>=0.16)'],
     classifiers=[
         'Programming Language :: Python',
