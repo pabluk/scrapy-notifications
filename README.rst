@@ -1,4 +1,4 @@
 scrapy-notifications
 ====================
 
-Send HTTP notifications to a webservice when an spider finished.
+Send HTTP notifications on spider actions.
