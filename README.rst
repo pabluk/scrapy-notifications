@@ -15,6 +15,11 @@ Install via pip
 
     pip install scrapy-notifications
 
+Tested with
+
+* Python 2.7+
+* Scrapy 0.16
+
 Setup
 -----
 
@@ -58,3 +63,8 @@ will generate a HTTP request like this
 
     http://app.example.com/spider-task/?name=dmoz&jobid=fe648c57f8
 
+Contributing
+------------
+
+Want to contribute? Great! Bug reports and code and documentation patches are greatly appretiated.
+Please file bugs and send pull requests using the `issue tracker <https://github.com/pabluk/scrapy-notifications/issues>`_.
